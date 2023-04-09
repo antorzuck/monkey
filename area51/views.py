@@ -6,7 +6,9 @@ from rest_framework.decorators import api_view
 
 # Create your views here.
 def home(r):
-    return render(r, 'base.html')
+    keys = Key.objects.all().order_by('-id')
+    return render(r, 'base.html',context={'keys':keys})
+
 
 
 @api_view(["POST"])

@@ -37,9 +37,11 @@
   </div>
 </nav>
 <div class="container">
+{% for k in keys %}
 <div class="img-thumbnail card-body bg-white p-3 my-1">
-Hello
+{{k.key}}
 </div>
+{% endif %}
 </div>
 
     <!-- Optional JavaScript -->
